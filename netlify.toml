@@ -1,0 +1,18 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+  command = "echo 'No build step needed — static site + functions'"
+
+[functions]
+  node_bundler = "esbuild"
+
+[functions."download"]
+  # Ships netlify/functions/ebook.pdf inside the deployed function so it can
+  # be read and served after a verified payment.
+  included_files = ["netlify/functions/ebook.pdf"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+  force = true
