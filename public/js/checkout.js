@@ -19,7 +19,7 @@ async function startCheckout(button) {
       amount: order.amount,
       currency: order.currency,
       order_id: order.order_id,
-      name: '200 Life-Changing eBook Summaries',
+      name: '50 Life-Changing eBook Summaries',
       description: 'Instant digital download',
       theme: { color: '#d9b45c' },
       handler: async function (response) {
