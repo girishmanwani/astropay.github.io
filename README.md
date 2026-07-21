@@ -1,6 +1,6 @@
-# 200 Life-Changing eBook Summaries — Landing Page + Razorpay Checkout
+# 50 Life-Changing eBook Summaries — Landing Page + Razorpay Checkout
 
-A one-product landing page that sells your ebook for ₹199 and only releases the
+A one-product landing page that sells your ebook for ₹9 and only releases the
 download after a genuine, verified Razorpay payment.
 
 ## What's included
@@ -45,7 +45,7 @@ to answer it. The fix is `netlify/functions/`, which Netlify does run.
    will now be routed to the functions instead of hitting a 404.
 
 **If your ebook file is large:** Netlify Functions cap a single response at
-roughly 6MB, which can be tight for a 200-summary PDF. If yours goes over
+roughly 6MB, which can be tight for a 50-summary PDF. If yours goes over
 that, either (a) deploy `server.js` to Render/Railway instead — no such
 limit there — or (b) host the PDF in external storage (S3, Google Cloud
 Storage, Backblaze) and have `download.js` redirect to a short-lived signed
@@ -53,7 +53,7 @@ URL instead of returning the file directly. Ask if you want that version.
 
 ## How the payment security works
 
-1. **Price is fixed on the server**, in `PRODUCT_PRICE_INR` (currently `199`).
+1. **Price is fixed on the server**, in `PRODUCT_PRICE_INR` (currently `9`).
    The browser never tells the server how much to charge, so nobody can pay
    less by editing the page or the request.
 2. When Razorpay confirms a payment, the browser sends back a signature. The
@@ -110,8 +110,8 @@ file to git (it's already in `.gitignore`).
 
 ## One thing worth flagging
 
-The ad image gives the price as **₹199**, and your dictated brief mostly
-says ₹199 too, but one line says "119." I've built everything around **₹199**
+The ad image gives the price as **₹9**, and your dictated brief mostly
+says ₹9 too, but one line says "119." I've built everything around **₹9**
 since that matches the image and the majority of the brief. If you actually
 meant ₹119 (or anything else), just change `PRODUCT_PRICE_INR` in `.env` —
 nothing else in the code needs to change.
