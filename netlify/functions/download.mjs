@@ -4,10 +4,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import crypto from 'node:crypto';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const funcDir = path.dirname(fileURLToPath(import.meta.url));
 // This file is bundled into the function via `included_files` in netlify.toml —
 // it lives right next to this function so it ships wherever the function does.
-const EBOOK_PATH = path.join(__dirname, 'ebook.pdf');
+const EBOOK_PATH = path.join(funcDir, 'ebook.pdf');
 
 function base64urlToBuffer(str) {
   str = str.replace(/-/g, '+').replace(/_/g, '/');
