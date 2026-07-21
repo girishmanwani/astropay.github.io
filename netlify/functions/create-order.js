@@ -7,7 +7,7 @@ exports.handler = async (event) => {
 
   const KEY_ID = process.env.RAZORPAY_KEY_ID;
   const KEY_SECRET = process.env.RAZORPAY_KEY_SECRET;
-  const PRICE_INR = Number(process.env.PRODUCT_PRICE_INR || 199);
+  const PRICE_INR = Number(process.env.PRODUCT_PRICE_INR || 9);
   const PRICE_PAISE = Math.round(PRICE_INR * 100);
 
   if (!KEY_ID || !KEY_SECRET) {
