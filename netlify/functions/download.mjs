@@ -63,7 +63,7 @@ export default async (req) => {
     headers: {
       'Content-Type': 'application/pdf',
       'Content-Length': String(size),
-      'Content-Disposition': 'attachment; filename="200-Life-Changing-eBook-Summaries.pdf"',
+      'Content-Disposition': 'attachment; filename="50-Life-Changing-eBook-Summaries.pdf"',
     },
   });
 };
